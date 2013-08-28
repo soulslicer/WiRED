@@ -48,4 +48,5 @@ Follow the circuit diagrams to build the connections. Then run the WiRED Server 
 * Server written in Java in Eclipse
 * Arduino programmed in C++ via Atmel Studio
 * ArduinoCore packaged by me, contains all required drivers. Using Arduino Libraries
+* More found at https://www.facebook.com/WiredIcreate
 
