@@ -1,0 +1,1746 @@
+06-07 16:52:56 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "TESTS" not found; SQL statement:
+SELECT * FROM TESTS [42102-172]
+06-07 17:24:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TESTS" not found; SQL statement:
+SELECT * FROM TESTS [42102-172]
+06-07 17:33:42 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO TEST VALUES('Hello') [21002-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.command.dml.Insert.prepare(Insert.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:680)
+06-07 17:34:28 jdbc[5]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at Logic.processSQL(Logic.java:58)
+	at Logic.processInputCommand(Logic.java:38)
+	at Main$UserInputThread.run(Main.java:48)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 12 more
+06-07 17:34:28 jdbc[5]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at Logic.processSQL(Logic.java:58)
+	at Logic.processInputCommand(Logic.java:38)
+	at Main$UserInputThread.run(Main.java:48)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 12 more
+06-07 17:34:46 jdbc[6]: exception
+org.h2.jdbc.JdbcSQLException: Method is only allowed for a query. Use execute or executeUpdate instead of executeQuery; SQL statement:
+INSERT INTO TEST VALUES('3','Hellos'); [90002-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.command.Prepared.query(Prepared.java:211)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:77)
+	at Logic.processSQL(Logic.java:59)
+	at Logic.processInputCommand(Logic.java:38)
+	at Main$UserInputThread.run(Main.java:48)
+06-07 17:42:22 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "TESTS" not found; SQL statement:
+SELECT * FROM TESTS [42102-172]
+06-08 23:38:20 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:655)
+	at org.h2.server.web.WebApp.login(WebApp.java:900)
+	at org.h2.server.web.WebApp.process(WebApp.java:205)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 14 more
+06-16 11:53:35 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO TEST VALUES(1, 'WiRED1', 'XYZ123','NULL') [21002-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.command.dml.Insert.prepare(Insert.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+06-16 15:22:26 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT TABLE[*] DEVICES(ID INT PRIMARY KEY AUTO_INCREMENT, DEVICENAME VARCHAR(255), DEVICEKEY VARCHAR(255), USER VARCHAR(255)) "; expected "INTO"; SQL statement:
+INSERT TABLE DEVICES(ID INT PRIMARY KEY auto_increment, DEVICENAME VARCHAR(255), DEVICEKEY VARCHAR(255), USER VARCHAR(255)) [42001-172]
+06-16 15:22:45 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT TABLE[*] DEVICES(ID INT PRIMARY KEY, DEVICENAME VARCHAR(255), DEVICEKEY VARCHAR(255), USER VARCHAR(255))"; expected "INTO"; SQL statement:
+INSERT TABLE DEVICES(ID INT PRIMARY KEY, DEVICENAME VARCHAR(255), DEVICEKEY VARCHAR(255), USER VARCHAR(255)) [42001-172]
+06-16 15:28:12 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT TABLE[*] USERS(ID INT PRIMARY KEY AUTO_INCREMENT, USERNAME VARCHAR(255), PASSWORD VARCHAR(255), DEVICENAME VARCHAR(255), PUBLICADDRESS VARCHAR(255), LOCALADDRESS VARCHAR(255), SCHEDULE VARCHAR(255)) "; expected "INTO"; SQL statement:
+INSERT TABLE USERS(ID INT PRIMARY KEY auto_increment, USERNAME VARCHAR(255), PASSWORD VARCHAR(255), DEVICENAME VARCHAR(255), PUBLICADDRESS VARCHAR(255), LOCALADDRESS VARCHAR(255), SCHEDULE VARCHAR(255)) [42001-172]
+06-16 15:48:23 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "DEV"; SQL statement:
+UPDATE USERS SET DEVICENAME = 'DEV' AND PUBLICADDRESS = '192' WHERE USERNAME = 'soulslicer' [22018-172]
+06-16 15:48:36 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USERS SET DEVICENAME = 'DEV'[*] & PUBLICADDRESS = '192' WHERE USERNAME = 'soulslicer'"; SQL statement:
+UPDATE USERS SET DEVICENAME = 'DEV' & PUBLICADDRESS = '192' WHERE USERNAME = 'soulslicer' [42000-172]
+06-16 15:49:01 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "DEV"; SQL statement:
+UPDATE USERS SET DEVICENAME = 'DEV' AND PUBLICADDRESS = '192' WHERE USERNAME = 'soulslicer' [22018-172]
+06-16 15:51:27 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column "EVICENAME" not found; SQL statement:
+UPDATE USERS SET   EVICENAME = 'DEV', PUBLICADDRESS = '192'   WHERE USERNAME = 'soulslicer' [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.table.Table.getColumn(Table.java:613)
+	at org.h2.command.Parser.readTableColumn(Parser.java:655)
+	at org.h2.command.Parser.parseUpdate(Parser.java:689)
+	at org.h2.command.Parser.parsePrepared(Parser.java:427)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+06-16 15:51:37 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column "EVICENAME" not found; SQL statement:
+UPDATE USERS SET    EVICENAME = 'DEV', PUBLICADDRESS = '192'   WHERE USERNAME = 'soulslicer' [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.table.Table.getColumn(Table.java:613)
+	at org.h2.command.Parser.readTableColumn(Parser.java:655)
+	at org.h2.command.Parser.parseUpdate(Parser.java:689)
+	at org.h2.command.Parser.parsePrepared(Parser.java:427)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+06-16 16:25:22 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DBCC[*] CHECKIDENT (ORDERS, NORESEED) "; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+DBCC CHECKIDENT (orders, NORESEED) [42001-172]
+06-19 22:28:25 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "USERS[*] SELECT * FROM DEVICES"; expected "UPDATE, {"; SQL statement:
+USERS SELECT * FROM DEVICES [42001-172]
+06-19 22:29:37 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DEVICES[*] SELECT * FROM USERS"; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+DEVICES SELECT * FROM USERS [42001-172]
+06-21 13:20:56 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USERS SET (DEVICENAME,PUBLICADDRESS) VALUES[*]('NULL','NULL') WHERE USERNAME='power' "; expected "="; SQL statement:
+UPDATE USERS SET (DEVICENAME,PUBLICADDRESS) values('NULL','NULL') where USERNAME='power' [42001-172]
+06-21 13:47:00 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM USERS WHERE USERNAME = 'raaj',[*]PASSWORD='pass'"; SQL statement:
+SELECT * FROM USERS WHERE USERNAME = 'raaj',PASSWORD='pass' [42000-172]
+06-21 13:47:06 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "PASSWORD[*]='pass'"; expected "PREPARE, {"; SQL statement:
+PASSWORD='pass' [42001-172]
+06-21 13:48:12 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Function "USERS" not found; SQL statement:
+SELECT * FROM USERS (USERNAME,PASSWORD) values('raa','pass') [90022-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2138)
+	at org.h2.command.Parser.readFunction(Parser.java:2190)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1084)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1705)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1813)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1699)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1542)
+	at org.h2.command.Parser.parseSelect(Parser.java:1530)
+	at org.h2.command.Parser.parsePrepared(Parser.java:405)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+06-21 13:48:14 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Function "USERS" not found; SQL statement:
+SELECT * FROM USERS (USERNAME,PASSWORD) values('raaj','pass') [90022-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2138)
+	at org.h2.command.Parser.readFunction(Parser.java:2190)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1084)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1705)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1813)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1699)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1542)
+	at org.h2.command.Parser.parseSelect(Parser.java:1530)
+	at org.h2.command.Parser.parsePrepared(Parser.java:405)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+06-21 13:48:15 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Function "USERS" not found; SQL statement:
+SELECT * FROM USERS (USERNAME,PASSWORD) values('raaj','pass') [90022-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2138)
+	at org.h2.command.Parser.readFunction(Parser.java:2190)
+	at org.h2.command.Parser.readTableFilter(Parser.java:1084)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1705)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1813)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1699)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1542)
+	at org.h2.command.Parser.parseSelect(Parser.java:1530)
+	at org.h2.command.Parser.parsePrepared(Parser.java:405)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+06-21 13:48:19 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM USERS WHERE (USERNAME,PASSWORD) VALUES[*]('raaj','pass') "; SQL statement:
+SELECT * FROM USERS WHERE (USERNAME,PASSWORD) values('raaj','pass') [42000-172]
+06-21 13:49:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM USERS WHERE USERNAME='raaj',[*]PASSWORD='pass'"; SQL statement:
+SELECT * FROM USERS WHERE USERNAME='raaj',PASSWORD='pass' [42000-172]
+06-21 13:49:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM USERS USERNAME=[*]'raaj',PASSWORD='pass'"; SQL statement:
+SELECT * FROM USERS USERNAME='raaj',PASSWORD='pass' [42000-172]
+06-21 13:52:05 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT USERNAME,PASSWORD  FROM USERS USERNAME=[*]'raaj' "; SQL statement:
+SELECT USERNAME,paSSWORD  FROM USERS USERNAME='raaj' [42000-172]
+06-21 13:52:10 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT USERNAME,PASSWORD  FROM USERS USERNAME=[*]'raaj'"; SQL statement:
+SELECT USERNAME,PASSWORD  FROM USERS USERNAME='raaj' [42000-172]
+06-22 22:32:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "USERNAME" not found; SQL statement:
+SELECT * FROM DEVICES WHERE USERNAME = 'User' [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.expression.Comparison.optimize(Comparison.java:161)
+	at org.h2.command.dml.Select.prepare(Select.java:811)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:71)
+	at DatabaseHandler.checkDeviceTied(DatabaseHandler.java:499)
+	at Logic.processDB(Logic.java:144)
+	at Logic.processInputCommand(Logic.java:115)
+	at Main$UserInputThread.run(Main.java:48)
+06-29 15:36:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE USERS SET DEVICENAME = 'NULL', PUBLICADDRESS = 'NULL'  WHERE USERNAME = 'raaj',[*]PASSWORD='pass'"; SQL statement:
+UPDATE USERS SET DEVICENAME = 'NULL', PUBLICADDRESS = 'NULL'  WHERE USERNAME = 'raaj',PASSWORD='pass' [42000-172]
+06-29 15:37:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM USERS UPDATE USERS[*] SET DEVICENAME = 'asd', PUBLICADDRESS = 'asd'  WHERE USERNAME = 'raaj' AND PASSWORD='pas'"; SQL statement:
+SELECT * FROM USERS UPDATE USERS SET DEVICENAME = 'asd', PUBLICADDRESS = 'asd'  WHERE USERNAME = 'raaj' AND PASSWORD='pas' [42000-172]
+06-29 15:44:13 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column "DEVICENAME" not found; SQL statement:
+INSERT INTO IRDEVICES (USERNAME,IRDEVICE,DEVICENAME,IMAGENAME,DESC) values('AirCon','NULL','My Room one') [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.table.Table.getColumn(Table.java:613)
+	at org.h2.command.Parser.parseColumn(Parser.java:802)
+	at org.h2.command.Parser.parseColumnList(Parser.java:787)
+	at org.h2.command.Parser.parseInsert(Parser.java:975)
+	at org.h2.command.Parser.parsePrepared(Parser.java:375)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at DatabaseHandler.addUpdateIRDevice(DatabaseHandler.java:627)
+	at Logic.processCMD(Logic.java:251)
+	at Logic.processInputCommand(Logic.java:167)
+	at Main$UserInputThread.run(Main.java:48)
+06-29 15:45:37 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+INSERT INTO IRDEVICES (USERNAME,IRDEVICE,IMAGENAME,DESC) values('AirCon','NULL','My Room one') [21002-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.command.dml.Insert.prepare(Insert.java:232)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at DatabaseHandler.addUpdateIRDevice(DatabaseHandler.java:627)
+	at Logic.processCMD(Logic.java:251)
+	at Logic.processInputCommand(Logic.java:167)
+	at Main$UserInputThread.run(Main.java:48)
+06-29 15:47:43 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE IRDEVICES SET DESC= 'Cock',WHERE[*] USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon'"; expected "identifier"; SQL statement:
+UPDATE IRDEVICES SET DESC= 'Cock',WHERE USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon' [42001-172]
+06-29 15:48:52 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE IRDEVICES SET DESC= 'Cock',WHERE[*] USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon'"; expected "identifier"; SQL statement:
+UPDATE IRDEVICES SET DESC= 'Cock',WHERE USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon' [42001-172]
+06-29 15:49:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE IRDEVICES SET DESC= 'Cock',WHERE[*] USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon'"; expected "identifier"; SQL statement:
+UPDATE IRDEVICES SET DESC= 'Cock',WHERE USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon' [42001-172]
+06-29 15:49:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE IRDEVICES SET DESC= 'Cock',WHERE[*] USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon'IRDEVICES"; expected "identifier"; SQL statement:
+UPDATE IRDEVICES SET DESC= 'Cock',WHERE USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon'IRDEVICES [42001-172]
+06-29 15:49:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDATE IRDEVICES SET DESC= 'Cock', WHERE[*] USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon'"; expected "identifier"; SQL statement:
+UPDATE IRDEVICES SET DESC= 'Cock', WHERE USERNAME = 'Fawazz' AND IRDEVICE= 'AirCon' [42001-172]
+07-02 12:42:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM IRCODES WHERE USERNAME = 'Userass' AND IRDEVICE = 'Aircon'' AND IRCOMMAND = 'ON[*]'"; SQL statement:
+SELECT * FROM IRCODES WHERE USERNAME = 'Userass' AND IRDEVICE = 'Aircon'' AND IRCOMMAND = 'ON' [42000-172]
+07-02 12:44:06 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM IRCODES WHERE USERNAME = 'Userass' AND IRDEVICE = 'Aircon'' AND IRCOMMAND = 'ON[*]'"; SQL statement:
+SELECT * FROM IRCODES WHERE USERNAME = 'Userass' AND IRDEVICE = 'Aircon'' AND IRCOMMAND = 'ON' [42000-172]
+07-02 22:47:01 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "USERS[*] SELECT * FROM IRCODES"; expected "UPDATE, {"; SQL statement:
+USERS SELECT * FROM IRCODES [42001-172]
+07-03 11:40:44 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'' (IRDEVICES: ID INT DEFAULT (NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_38625632_4FF8_4005_9B9F_242830A3EC29) NOT NULL NULL_TO_DEFAULT SEQUENCE PUBLIC.SYSTEM_SEQUENCE_38625632_4FF8_4005_9B9F_242830A3EC29)"; SQL statement:
+INSERT INTO "PUBLIC"."IRDEVICES"("ID","USERNAME","IRDEVICE","IMAGENAME","DESC")VALUES(?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5) [22018-172]
+07-03 11:40:44 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Data conversion error converting "'' (IRDEVICES: ID INT DEFAULT (NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_38625632_4FF8_4005_9B9F_242830A3EC29) NOT NULL NULL_TO_DEFAULT SEQUENCE PUBLIC.SYSTEM_SEQUENCE_38625632_4FF8_4005_9B9F_242830A3EC29)"; SQL statement:
+INSERT INTO "PUBLIC"."IRDEVICES"("ID","USERNAME","IRDEVICE","IMAGENAME","DESC")VALUES(?,?,?,?,?) -- (?1, ?2, ?3, ?4, ?5) [22018-172]
+07-05 12:31:12 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM IRCODES WHERE RUNDATE >= '2013-07-05 13:00:00' AND <[*] '2013-07-05 13:01:00'"; expected "NOT, EXISTS"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE >= '2013-07-05 13:00:00' AND < '2013-07-05 13:01:00' [42001-172]
+07-05 12:31:23 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM IRCODES WHERE RUNDATE >= '2013-07-05 13:00:00' ,[*] < '2013-07-05 13:01:00'"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE >= '2013-07-05 13:00:00' , < '2013-07-05 13:01:00' [42000-172]
+07-05 13:36:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-36-05 01:36:00"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE between '2013-36-05 01:36:00' AND '2013-36-05 01:36:59' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.expression.Comparison.getValue(Comparison.java:237)
+	at org.h2.expression.ConditionAndOr.getValue(ConditionAndOr.java:87)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:180)
+	at org.h2.command.dml.Select.queryFlat(Select.java:520)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:77)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1058)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-36-5
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 23 more
+07-05 13:41:30 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "CODES" not found; SQL statement:
+SELECT * FROM CODES WHERE RUNDATE between '2013-36-05 01:36:00' AND '2013-36-05 01:36:59' [42102-172]
+07-05 13:41:35 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-36-05 01:36:00"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE between '2013-36-05 01:36:00' AND '2013-36-05 01:36:59' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.expression.Comparison.getValue(Comparison.java:237)
+	at org.h2.expression.ConditionAndOr.getValue(ConditionAndOr.java:87)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:180)
+	at org.h2.command.dml.Select.queryFlat(Select.java:520)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-36-5
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 20 more
+07-05 13:42:19 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-36-05 01:36:00"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE between '2013-36-05 01:36:00' AND '2013-36-05 01:36:59' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.expression.Comparison.getValue(Comparison.java:237)
+	at org.h2.expression.ConditionAndOr.getValue(ConditionAndOr.java:87)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:180)
+	at org.h2.command.dml.Select.queryFlat(Select.java:520)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-36-5
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 20 more
+07-05 13:42:27 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-36-05 01:36:00:00"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE between '2013-36-05 01:36:00:00' AND '2013-36-05 01:36:59:00' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.expression.Comparison.getValue(Comparison.java:237)
+	at org.h2.expression.ConditionAndOr.getValue(ConditionAndOr.java:87)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:180)
+	at org.h2.command.dml.Select.queryFlat(Select.java:520)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-36-5
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 20 more
+07-05 13:43:45 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT * FROM IRCODES WHERE RUNDATE BET[*]=EEN '2013-36-05 01:36:00:00' "; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE bet=een '2013-36-05 01:36:00:00' [42000-172]
+07-05 13:43:52 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-36-05 01:36:00:00"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE = '2013-36-05 01:36:00:00' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.expression.Comparison.getValue(Comparison.java:237)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:180)
+	at org.h2.command.dml.Select.queryFlat(Select.java:520)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-36-5
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 19 more
+07-05 13:45:50 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-36-05 01:36:00:00"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE = '2013-36-05 01:36:00:00' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.expression.Comparison.getValue(Comparison.java:237)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:180)
+	at org.h2.command.dml.Select.queryFlat(Select.java:520)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-36-5
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 19 more
+07-05 13:45:57 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-36-05 01:36:00:00"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE between '2013-36-05 01:36:00:00' AND '2013-36-05 01:36:59:00' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.expression.Comparison.getValue(Comparison.java:237)
+	at org.h2.expression.ConditionAndOr.getValue(ConditionAndOr.java:87)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:180)
+	at org.h2.command.dml.Select.queryFlat(Select.java:520)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-36-5
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 20 more
+07-05 13:46:26 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-06-05 01:36:00:00"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE between '2013-06-05 01:36:00:00' AND '2013-06-05 01:36:59:00' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.expression.Comparison.getValue(Comparison.java:237)
+	at org.h2.expression.ConditionAndOr.getValue(ConditionAndOr.java:87)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:180)
+	at org.h2.command.dml.Select.queryFlat(Select.java:520)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:176)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.NumberFormatException: For input string: "00:00"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.h2.util.DateTimeUtils.parseTimeNanos(DateTimeUtils.java:314)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:139)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 20 more
+07-05 13:47:18 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-47-05 01:47:00"; SQL statement:
+SELECT * FROM IRCODES WHERE RUNDATE between '2013-47-05 01:47:00' AND '2013-47-05 01:47:59' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.expression.Comparison.getValue(Comparison.java:237)
+	at org.h2.expression.ConditionAndOr.getValue(ConditionAndOr.java:87)
+	at org.h2.expression.Expression.getBooleanValue(Expression.java:180)
+	at org.h2.command.dml.Select.queryFlat(Select.java:520)
+	at org.h2.command.dml.Select.queryWithoutCache(Select.java:625)
+	at org.h2.command.dml.Query.query(Query.java:314)
+	at org.h2.command.dml.Query.query(Query.java:284)
+	at org.h2.command.dml.Query.query(Query.java:36)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:91)
+	at org.h2.command.Command.executeQuery(Command.java:195)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:77)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1058)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:42)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-47-5
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 23 more
+07-05 15:14:27 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-07-05 14:15:00a"; SQL statement:
+UPDATE "PUBLIC"."IRCODES" SET "ID"=? ,"USERNAME"=? ,"IRDEVICE"=? ,"IRCOMMAND"=? ,"DESC"=? ,"DATASTRING"=? ,"RUNDATE"=?  WHERE "ID"=? [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:154)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:140)
+	at org.h2.result.UpdatableRow.updateRow(UpdatableRow.java:283)
+	at org.h2.jdbc.JdbcResultSet.updateRow(JdbcResultSet.java:2922)
+	at org.h2.server.web.WebApp.editResult(WebApp.java:1028)
+	at org.h2.server.web.WebApp.process(WebApp.java:221)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.NumberFormatException: For input string: "00a"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.h2.util.DateTimeUtils.parseTimeNanos(DateTimeUtils.java:314)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:139)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 15 more
+07-05 15:14:27 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-07-05 14:15:00a"; SQL statement:
+UPDATE "PUBLIC"."IRCODES" SET "ID"=? ,"USERNAME"=? ,"IRDEVICE"=? ,"IRCOMMAND"=? ,"DESC"=? ,"DATASTRING"=? ,"RUNDATE"=?  WHERE "ID"=? [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:154)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:140)
+	at org.h2.result.UpdatableRow.updateRow(UpdatableRow.java:283)
+	at org.h2.jdbc.JdbcResultSet.updateRow(JdbcResultSet.java:2922)
+	at org.h2.server.web.WebApp.editResult(WebApp.java:1028)
+	at org.h2.server.web.WebApp.process(WebApp.java:221)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.NumberFormatException: For input string: "00a"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.h2.util.DateTimeUtils.parseTimeNanos(DateTimeUtils.java:314)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:139)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 15 more
+07-05 23:33:00 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "NULL"; SQL statement:
+UPDATE "PUBLIC"."IRCODES" SET "ID"=? ,"USERNAME"=? ,"IRDEVICE"=? ,"IRCOMMAND"=? ,"DESC"=? ,"DATASTRING"=? ,"RUNDATE"=?  WHERE "ID"=? [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:154)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:140)
+	at org.h2.result.UpdatableRow.updateRow(UpdatableRow.java:283)
+	at org.h2.jdbc.JdbcResultSet.updateRow(JdbcResultSet.java:2922)
+	at org.h2.server.web.WebApp.editResult(WebApp.java:1028)
+	at org.h2.server.web.WebApp.process(WebApp.java:221)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: NULL
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:270)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 15 more
+07-05 23:33:00 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "NULL"; SQL statement:
+UPDATE "PUBLIC"."IRCODES" SET "ID"=? ,"USERNAME"=? ,"IRDEVICE"=? ,"IRCOMMAND"=? ,"DESC"=? ,"DATASTRING"=? ,"RUNDATE"=?  WHERE "ID"=? [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:154)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:140)
+	at org.h2.result.UpdatableRow.updateRow(UpdatableRow.java:283)
+	at org.h2.jdbc.JdbcResultSet.updateRow(JdbcResultSet.java:2922)
+	at org.h2.server.web.WebApp.editResult(WebApp.java:1028)
+	at org.h2.server.web.WebApp.process(WebApp.java:221)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: NULL
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:270)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 15 more
+07-06 00:49:20 jdbc[28]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:655)
+	at org.h2.server.web.WebApp.login(WebApp.java:900)
+	at org.h2.server.web.WebApp.process(WebApp.java:205)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 14 more
+07-06 15:35:20 jdbc[136]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1083)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-06 15:35:20 jdbc[136]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1083)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-06 15:35:20 jdbc[136]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1083)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-06 23:26:39 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "UPDTE[*] IRCODES SET RUNDATE='2013-07-06 00:55:00' WHERE USERNAME='USER' AND IRDEVICE='TV' AND IRCOMMAND='O'"; expected "UPDATE, {"; SQL statement:
+UPDTE IRCODES SET RUNDATE='2013-07-06 00:55:00' WHERE USERNAME='USER' AND IRDEVICE='TV' AND IRCOMMAND='O' [42001-172]
+07-06 23:27:09 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "null"; SQL statement:
+UPDATE IRCODES SET RUNDATE='null' WHERE USERNAME='User' AND IRDEVICE='TV' AND IRCOMMAND='ON' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:180)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: null
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:270)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 14 more
+07-06 23:27:40 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant ; SQL statement:
+UPDATE IRCODES SET RUNDATE='' WHERE USERNAME='User' AND IRDEVICE='TV' AND IRCOMMAND='ON' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:180)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(String.java:658)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:262)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 14 more
+07-06 23:27:46 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant ; SQL statement:
+UPDATE IRCODES SET RUNDATE=' ' WHERE USERNAME='User' AND IRDEVICE='TV' AND IRCOMMAND='ON' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:180)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(String.java:658)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:262)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 14 more
+07-06 23:28:56 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant ; SQL statement:
+UPDATE IRCODES SET RUNDATE='' WHERE USERNAME='User' AND IRDEVICE='TV' AND IRCOMMAND='ON' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:180)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(String.java:658)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:262)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 14 more
+07-06 23:33:35 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "NULL"; SQL statement:
+UPDATE IRCODES SET RUNDATE='NULL' WHERE USERNAME='User' AND IRDEVICE='TV' AND IRCOMMAND='ON' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:180)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: NULL
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:270)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 14 more
+07-06 23:35:32 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant ; SQL statement:
+UPDATE "PUBLIC"."IRCODES" SET "ID"=? ,"USERNAME"=? ,"IRDEVICE"=? ,"IRCOMMAND"=? ,"DESC"=? ,"DATASTRING"=? ,"RUNDATE"=?  WHERE "ID"=? [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:154)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:140)
+	at org.h2.result.UpdatableRow.updateRow(UpdatableRow.java:283)
+	at org.h2.jdbc.JdbcResultSet.updateRow(JdbcResultSet.java:2922)
+	at org.h2.server.web.WebApp.editResult(WebApp.java:1028)
+	at org.h2.server.web.WebApp.process(WebApp.java:221)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(String.java:658)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:262)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 15 more
+07-06 23:35:32 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant ; SQL statement:
+UPDATE "PUBLIC"."IRCODES" SET "ID"=? ,"USERNAME"=? ,"IRDEVICE"=? ,"IRCOMMAND"=? ,"DESC"=? ,"DATASTRING"=? ,"RUNDATE"=?  WHERE "ID"=? [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:154)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:140)
+	at org.h2.result.UpdatableRow.updateRow(UpdatableRow.java:283)
+	at org.h2.jdbc.JdbcResultSet.updateRow(JdbcResultSet.java:2922)
+	at org.h2.server.web.WebApp.editResult(WebApp.java:1028)
+	at org.h2.server.web.WebApp.process(WebApp.java:221)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(String.java:658)
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:262)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 15 more
+07-06 23:36:03 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "null"; SQL statement:
+UPDATE IRCODES SET RUNDATE='null' WHERE USERNAME='User' AND IRDEVICE='TV' AND IRCOMMAND='ON' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:180)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: null
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:270)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 14 more
+07-06 23:46:45 jdbc[7]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-07-186 22:45:46"; SQL statement:
+UPDATE IRCODES SET RUNDATE= '2013-07-186 22:45:46' WHERE USERNAME = 'User' AND IRDEVICE= 'Aircon' AND IRCOMMAND= 'ON' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:180)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at MainPackage.DatabaseHandler.setRunDate(DatabaseHandler.java:1077)
+	at getPostPackage.PostRunDate.doPost(PostRunDate.java:30)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-7-186
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 32 more
+07-06 23:47:37 jdbc[11]: exception
+org.h2.jdbc.JdbcSQLException: Cannot parse "TIMESTAMP" constant "2013-07-187 22:47:31"; SQL statement:
+UPDATE IRCODES SET RUNDATE= '2013-07-187 22:47:31' WHERE USERNAME = 'User' AND IRDEVICE= 'Aircon' AND IRCOMMAND= 'ON' [22007-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:158)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:87)
+	at org.h2.value.Value.convertTo(Value.java:821)
+	at org.h2.table.Column.convert(Column.java:145)
+	at org.h2.command.dml.Update.update(Update.java:120)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:79)
+	at org.h2.command.Command.executeUpdate(Command.java:235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:180)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at MainPackage.DatabaseHandler.setRunDate(DatabaseHandler.java:1077)
+	at getPostPackage.PostRunDate.doPost(PostRunDate.java:30)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: java.lang.IllegalArgumentException: 2013-7-187
+	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:276)
+	at org.h2.value.ValueTimestamp.parseTry(ValueTimestamp.java:105)
+	at org.h2.value.ValueTimestamp.parse(ValueTimestamp.java:85)
+	... 32 more
+07-07 01:44:55 jdbc[235]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.updateUser(DatabaseHandler.java:277)
+	at MainPackage.Logic.processFromDevice(Logic.java:217)
+	at MainPackage.WorkerRunnable.run(WorkerRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 15 more
+07-07 01:44:55 jdbc[235]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.updateUser(DatabaseHandler.java:277)
+	at MainPackage.Logic.processFromDevice(Logic.java:217)
+	at MainPackage.WorkerRunnable.run(WorkerRunnable.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 15 more
+07-07 02:12:24 jdbc[408]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1096)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-07 15:54:42 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column "USERNAME" not found; SQL statement:
+SELECT * FROM DEVICES WHERE USERNAME = 'User' [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.expression.Comparison.optimize(Comparison.java:161)
+	at org.h2.command.dml.Select.prepare(Select.java:811)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:71)
+	at MainPackage.DatabaseHandler.getDeviceKey(DatabaseHandler.java:1058)
+	at getPostPackage.PostRetreiveDeviceKey.doPost(PostRetreiveDeviceKey.java:23)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+07-07 15:55:41 jdbc[10]: exception
+org.h2.jdbc.JdbcSQLException: Column "USERNAME" not found; SQL statement:
+SELECT * FROM DEVICES WHERE USERNAME = 'User' [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.expression.Comparison.optimize(Comparison.java:161)
+	at org.h2.command.dml.Select.prepare(Select.java:811)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:71)
+	at MainPackage.DatabaseHandler.getDeviceKey(DatabaseHandler.java:1058)
+	at getPostPackage.PostRetreiveDeviceKey.doPost(PostRetreiveDeviceKey.java:23)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+07-07 15:58:46 jdbc[18]: exception
+org.h2.jdbc.JdbcSQLException: Column "USERNAME" not found; SQL statement:
+SELECT * FROM DEVICES WHERE USERNAME = 'User' [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.expression.Comparison.optimize(Comparison.java:161)
+	at org.h2.command.dml.Select.prepare(Select.java:811)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:71)
+	at MainPackage.DatabaseHandler.getDeviceKey(DatabaseHandler.java:1058)
+	at getPostPackage.PostRetreiveDeviceKey.doPost(PostRetreiveDeviceKey.java:23)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+07-07 15:58:56 jdbc[19]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1118)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-07 15:58:56 jdbc[19]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1118)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-07 15:58:56 jdbc[19]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1118)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-07 16:00:39 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column "USERNAME" not found; SQL statement:
+SELECT * FROM DEVICES WHERE USERNAME = 'User' [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.expression.Comparison.optimize(Comparison.java:161)
+	at org.h2.command.dml.Select.prepare(Select.java:811)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:71)
+	at MainPackage.DatabaseHandler.getDeviceKey(DatabaseHandler.java:1058)
+	at getPostPackage.PostRetreiveDeviceKey.doPost(PostRetreiveDeviceKey.java:23)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+07-07 16:01:18 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Column "USERNAME" not found; SQL statement:
+SELECT * FROM DEVICES WHERE USERNAME = 'User' [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.expression.Comparison.optimize(Comparison.java:161)
+	at org.h2.command.dml.Select.prepare(Select.java:811)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:71)
+	at MainPackage.DatabaseHandler.getDeviceKey(DatabaseHandler.java:1058)
+	at getPostPackage.PostRetreiveDeviceKey.doPost(PostRetreiveDeviceKey.java:23)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+07-07 16:02:23 jdbc[10]: exception
+org.h2.jdbc.JdbcSQLException: Column "USERNAME" not found; SQL statement:
+SELECT * FROM DEVICES WHERE USERNAME = 'User' [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.expression.Comparison.optimize(Comparison.java:161)
+	at org.h2.command.dml.Select.prepare(Select.java:811)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:71)
+	at MainPackage.DatabaseHandler.getDeviceKey(DatabaseHandler.java:1058)
+	at getPostPackage.PostRetreiveDeviceKey.doPost(PostRetreiveDeviceKey.java:23)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+07-07 17:18:10 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO IRDEVICES (USERNAME,IRDEVICE,IMAGENAME,DESC) values('User','Sharp TV','NULL','Sharp TV in parent's room[*]')"; SQL statement:
+INSERT INTO IRDEVICES (USERNAME,IRDEVICE,IMAGENAME,DESC) values('User','Sharp TV','NULL','Sharp TV in parent's room') [42000-172]
+07-07 17:18:49 jdbc[9]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','ON','turn on tv','0-A-�(E(/(/(/(/(/(E(E(/(E'0'0'0(E'0'[*]')"; SQL statement:
+INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','ON','turn on tv','0-A-�(E(/(/(/(/(/(E(E(/(E'0'0'0(E'0'') [42000-172]
+07-07 17:19:55 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) VALUES('User','Sharp TV','ON','on tv','0-A-(E(/(/(/(/(/(E(E(/(E'0[*]'0'0'F'0'') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','ON','on tv','0-A-(E(/(/(/(/(/(E(E(/(E'0'0'0'F'0'') [42001-172]
+07-07 17:22:03 jdbc[25]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1118)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-07 17:22:03 jdbc[25]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1118)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-07 17:22:03 jdbc[25]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.getMatchingTimes(DatabaseHandler.java:1118)
+	at MainPackage.DateScheduler.taskToRun(DateScheduler.java:21)
+	at MainPackage.DateScheduler$1.run(DateScheduler.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 20 more
+07-07 17:33:29 jdbc[46]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) VALUES('User','Sharp TV','Sharp Tv','turn on TV','0-A-+(F'0[*]'0'/)/'0'E(E(/(E(/(/'0(E'0'') "; expected "[, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','Sharp Tv','turn on TV','0-A-+(F'0'0'/)/'0'E(E(/(E(/(/'0(E'0'') [42001-172]
+07-07 17:37:56 jdbc[74]: java.lang.Exception: Open Stack Trace
+	at org.h2.util.CloseWatcher.register(CloseWatcher.java:99)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:117)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.addIRCode(DatabaseHandler.java:798)
+	at getPostPackage.SendIRCodeFromDevice.doPost(SendIRCodeFromDevice.java:34)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:187)
+	at org.h2.jdbcx.JdbcDataSource.getConnection(JdbcDataSource.java:161)
+	at MainPackage.DatabaseHandler.removeIRCode(DatabaseHandler.java:817)
+	at getPostPackage.PostRemoveIRCode.doPost(PostRemoveIRCode.java:25)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:688)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:770)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:669)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:457)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:229)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:488)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:943)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:861)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 34 more
+07-07 17:38:20 jdbc[80]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','a','a','0-A-�(E(/(/(/(/(/(E(E(/(E'0'0'0(E'0'[*]')"; SQL statement:
+INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','a','a','0-A-�(E(/(/(/(/(/(E(E(/(E'0'0'0(E'0'') [42000-172]
+07-07 17:38:58 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','a','a','0-A-�(E(/(/(/(/(/(E(E(/(E'0'0'0(E'0'[*][*]')"; SQL statement:
+INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','a','a','0-A-�(E(/(/(/(/(/(E(E(/(E'0'0'0(E'0'[*]') [42000-172]
+07-07 17:39:36 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','a','a','0-A-�(E(/(/(/(/(/(E(E(/(E'0'0'0(E'0'[*]')"; SQL statement:
+INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','a','a','0-A-�(E(/(/(/(/(/(E(E(/(E'0'0'0(E'0'') [42000-172]
+07-07 17:40:24 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','a','a','d''d'[*][*]')"; SQL statement:
+INSERT INTO IRCODES (USERNAME,IRDEVICE,IRCOMMAND,DESC,DATASTRING) values('User','Sharp TV','a','a','d''d'[*]') [42000-172]

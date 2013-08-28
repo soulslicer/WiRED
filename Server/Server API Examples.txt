@@ -1,0 +1,72 @@
+curl --data "username=Userass&password=Pass&irdevice=Aircon&ircommand=OFF&desc=Turns off room aircon" http://localhost:8080/GetIRCodeFromDevice
+curl --data "username=Userass&password=Pass&irdevice=Aircon&ircommand=ON" http://localhost:8080/SendIRData
+
+curl --data "username=Userss&password=Pass&irdevice=Aircon&ircommand=ON&desc=My Desc" http://localhost:8080/GetIRCodeFromDevice
+
+0-c-àiQ-,.D-D.C.,.,---D.,-,.,.,-,.,.,.,-D.,-,.D-D.,---,.,.,-,.D-D.,-D-
+0-c-àiQ-,.D-D.C.,.,---D.,-,.,.,-,.,.,.,-D.,-,.D-D.,---,.,.,-,.D-D.,-D-
+
+;);(*9;);(*9+9*9+8+9;(*
+
+0-9-;);(*9;);(*9+9*9+8+9;(*
+0-9-;);(*9;);(*9+9*9+8+9;(*
+
+curl --data "username=Userass&password=Pass&irdevice=Aircon&ircommand=OFF&desc=My Desc" http://localhost:8080/GetIRCodeFromDevice
+curl --data "username=User&password=Pass&irdevice=Aircon&ircommand=OFF" http://localhost:8080/SendIRData
+
+
+curl --data "username=User&password=Pass&irdevice=Aircon&ircommand=ON" http://localhost:8080/SendIRData
+
+curl --data "username=User&password=Pass&irdevice=Aircon&ircommand=ON&desc=Turn on room aircon" http://localhost:8080/SendIRCodeFromDevice
+
+(Aircon)
+curl --data "username=User&password=Pass&irdevice=Aircon&ircommand=ON" http://localhost:8080/SendIRData
+curl --data "username=User&password=Pass&irdevice=Aircon&ircommand=ON" http://localhost:8080/SendIRData
+
+curl --data "username=User&password=Pass&irdevice=Aircon&ircommand=TEST" http://localhost:8080/SendIRData
+
+curl --data "username=User&irdevice=Aircon&ircommand=ON&loopcount=5" http://localhost:8080/PostRawLoopCount
+
+
+(Login)
+curl --data "username=User&password=Pass" http://localhost:8080/PostLoginInfo
+
+(verify)
+
+curl --data "username=User&password=Pass" http://localhost:8080/SendVerifyDeviceStatus
+
+
+
+(Add New Starhub Device)
+
+curl --data "username=User&irdevice=Starhub&desc=My Starhub Box" http://localhost:8080/PostAddIRDevice
+
+curl --data "username=User&irdevice=TV&desc=My TV" http://localhost:8080/PostAddIRDevice
+
+(Add New IR Command)
+
+curl --data "username=User&password=Pass&irdevice=Starhub&ircommand=ON&desc=Turn on cable box" http://localhost:8080/SendIRCodeFromDevice
+
+curl --data "username=User&password=Pass&irdevice=StandFan&ircommand=ON&desc=Turn on fan" http://localhost:8080/SendIRCodeFromDevice
+
+curl --data "username=User&password=Pass&irdevice=TV&ircommand=ON&desc=Turn on TV" http://localhost:8080/SendIRCodeFromDevice
+
+
+(Send it)
+
+curl --data "username=User&password=Pass&irdevice=Starhub&ircommand=ON" http://localhost:8080/SendIRData
+
+curl --data "username=User&password=Pass&irdevice=StandFan&ircommand=ON" http://localhost:8080/SendIRData
+
+curl --data "username=User&password=Pass&irdevice=TV&ircommand=ON" http://localhost:8080/SendIRData
+
+(Change count)
+
+curl --data "username=User&irdevice=Starhub&ircommand=ON&loopcount=10" http://localhost:8080/PostRawLoopCount
+
+curl --data "username=User&irdevice=StandFan&ircommand=ON&loopcount=1" http://localhost:8080/PostRawLoopCount
+
+(Remove it)
+
+
+curl --data "username=User&irdevice=Starhub&ircommand=ON" http://localhost:8080/PostRemoveIRCode

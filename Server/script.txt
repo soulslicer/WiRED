@@ -1,0 +1,7 @@
+#!/bin/bash
+# My first script
+
+echo "Running WiRED Upload!"
+ant -buildfile build.xml
+scp -i WiREDKey.pem WiREDServer.jar ec2-user@54.251.191.181:~
+ssh -l ec2-user -i WiREDKey.pem 54.251.191.181 java -jar WiREDServer.jar
